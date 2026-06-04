@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'Alte Haas Grotesk';
+  src: url('/fonts/AlteHaasGroteskRegular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Alte Haas Grotesk';
+  src: url('/fonts/AlteHaasGroteskBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Gold flash on middle-click (overrides the inline box-shadow while playing) */
+@keyframes flashGold {
+  0% { box-shadow: 0 0 0 0 rgba(245, 197, 24, 0); }
+  15% { box-shadow: 0 0 0 8px rgba(245, 197, 24, 0.95); }
+  100% { box-shadow: 0 0 0 14px rgba(245, 197, 24, 0); }
+}
+.flash-gold {
+  animation: flashGold 2s ease-out;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: 'Alte Haas Grotesk', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Make the React Flow canvas background match the Useful Charts beige */
+.react-flow {
+  background: #ede8d8;
+}
+

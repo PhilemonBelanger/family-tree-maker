@@ -1,0 +1,10 @@
+services:
+  family-tree:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: family-tree-maker
+    container_name: family-tree-maker
+    ports:
+      - "8080:80"
+    restart: unless-stopped
