@@ -21,7 +21,7 @@ export default function Toolbar() {
   const loadDemo = async () => {
     if (!confirm('Load the Fittipaldi demo? This replaces the current tree.')) return
     try {
-      const res = await fetch('/demo/fittipaldi.json')
+      const res = await fetch(`${import.meta.env.BASE_URL}demo/fittipaldi.json`)
       if (!res.ok) throw new Error('HTTP ' + res.status)
       importJSON(await res.text())
     } catch (err) {
